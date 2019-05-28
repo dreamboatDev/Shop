@@ -34,7 +34,7 @@ namespace Shop.UI
             });
 
             //C:\Users\Alex\Desktop\ShopOnline\Shop\Shop.Database>dotnet ef --startup-project ../Shop.UI migrations add init
-            //C:\Users\Alex\Desktop\ShopOnline\Shop\Shop.Database>dotnet ef --startup-project ../Shop.UI database update
+            //C:\Users\Alex\Desktop\ShopOnline\Shop\Shop.Database>dotnet ef --startup-project ../Shop.UI database update  
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["DefaultConnection"]));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);            
