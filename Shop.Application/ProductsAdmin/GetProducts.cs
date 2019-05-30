@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Shop.Application.Products
+namespace Shop.Application.ProductsAdmin
 {
     public class GetProducts
     {
@@ -18,9 +18,10 @@ namespace Shop.Application.Products
         public IEnumerable<ProductViewModel> Do() =>
             _context.Products.ToList().Select(x => new ProductViewModel
             {
+                Id = x.Id,
                 Name = x.Name,
                 Decription = x.Decription,
-                Value = $"$ {x.Value.ToString("N2")}" //1100.50 => 1,100.50 => $ 1,100.50
+                Value = x.Value
             });
 
         //2 вариант записи метода Do()
@@ -36,9 +37,10 @@ namespace Shop.Application.Products
         //}
         public class ProductViewModel
         {
+            public int Id { get; set; }
             public string Name { get; set; }
             public string Decription { get; set; }
-            public string Value { get; set; }
+            public decimal Value { get; set; }
         }
     }
     
