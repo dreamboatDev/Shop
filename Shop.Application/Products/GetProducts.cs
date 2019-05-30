@@ -19,7 +19,7 @@ namespace Shop.Application.Products
             _context.Products.ToList().Select(x => new ProductViewModel
             {
                 Name = x.Name,
-                Decription = x.Decription,
+                Description = x.Description,
                 Value = $"$ {x.Value.ToString("N2")}" //1100.50 => 1,100.50 => $ 1,100.50
             });
 
@@ -30,14 +30,14 @@ namespace Shop.Application.Products
         //    return _context.Products.ToList().Select(x => new ProductViewModel
         //    {
         //        Name = x.Name,
-        //        Decription = x.Decription,
+        //        Decription = x.Description,
         //        Value = $"$ {x.Value.ToString("N2")}" //1100.50 => 1,100.50 => $ 1,100.50
         //    }) ;
         //}
         public class ProductViewModel
         {
             public string Name { get; set; }
-            public string Decription { get; set; }
+            public string Description { get; set; }
             public string Value { get; set; }
         }
     }
