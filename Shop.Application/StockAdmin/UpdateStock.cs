@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Application.StockAdmin
 {
-    class UpdateStock
+    public class UpdateStock
     {
         private ApplicationDbContext _context;
 
